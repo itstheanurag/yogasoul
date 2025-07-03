@@ -11,7 +11,7 @@ const FaqSection = () => {
   return (
     <section className="bg-white m-5 md:px-12 text-gray-800">
       <div className="max-w-4xl mx-auto m-5">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-orange-600 mb-8">
+        <h2 className="text-3xl md:text-3xl font-bold text-center text-orange-600 mb-8">
           Frequently Asked Questions
         </h2>
 

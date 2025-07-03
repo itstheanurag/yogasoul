@@ -1,10 +1,9 @@
 // import { useState } from "react";
 import "./App.css";
-import AboutUs from "./components/AboutUs";
-import CallToAction from "./components/CallToAction";
 import FaqSection from "./components/FaqSection";
 import HomeScreen from "./components/HomeScreen";
 import NavBar from "./components/NavBar";
+import ReviewSection from "./components/ReviewSection";
 import ServicesSection from "./components/servicesSections";
 function App() {
   return (
@@ -14,6 +13,7 @@ function App() {
       <ServicesSection />
       {/* <AboutUs /> */}
       {/* <CallToAction /> */}
+      <ReviewSection />
       <FaqSection />
     </div>
   );

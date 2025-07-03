@@ -38,7 +38,7 @@ const NavBar = () => {
           <button
             className={`px-4 py-2 text-white rounded ${backgroundAnimationClasses}`}
           >
-            Book Now
+            Get a Quote
           </button>
         </div>
 
@@ -62,10 +62,11 @@ const NavBar = () => {
             <li className={textAnimationClass}>Team</li>
             <li className={textAnimationClass}>About Us</li>
           </ul>
+
           <button
             className={`mt-2 w-full py-2 text-white rounded ${backgroundAnimationClasses}`}
           >
-            Book Now
+            Get a Quote
           </button>
         </div>
       )}
