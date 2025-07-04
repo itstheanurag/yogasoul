@@ -1,21 +1,26 @@
-// import { useState } from "react";
-import "./App.css";
-import FaqSection from "./components/FaqSection";
-import HomeScreen from "./components/HomeScreen";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import ReviewSection from "./components/ReviewSection";
-import ServicesSection from "./components/servicesSections";
+import { About, Contact, Home } from "./pages";
+import ServicesPage from "./components/Services/Services";
+import "./App.css";
 function App() {
   return (
-    <div className="flex flex-col">
+    <BrowserRouter basename="/">
       <NavBar />
-      <HomeScreen />
-      <ServicesSection />
-      {/* <AboutUs /> */}
-      {/* <CallToAction /> */}
-      <ReviewSection />
-      <FaqSection />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<ServicesPage />} />
+        {/* <Route path="/team" element={<Team />} /> */}
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="*"
+          element={
+            <div className="p-8 text-center text-red-500">Page Not Found</div>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

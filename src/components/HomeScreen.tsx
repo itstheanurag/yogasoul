@@ -18,7 +18,7 @@ const textList = [
   "Let Your Breath Guide You",
 ];
 
-const HomeScreen = () => {
+const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const today = new Date().getDay();
@@ -85,4 +85,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default HeroSection;

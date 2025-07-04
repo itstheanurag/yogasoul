@@ -5,7 +5,7 @@ type Review = {
 };
 
 const ReviewCard = ({ name, text, avatar }: Review) => (
-  <div className="bg-white shadow-md p-6 mx-4 w-72 ">
+  <div className="bg-white shadow-md p-6 mx-4 w-72 leading-tight">
     {avatar && (
       <img
         src={avatar}
