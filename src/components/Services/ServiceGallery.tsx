@@ -26,7 +26,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({
 
   return (
     <section className=" bg-amber-50 px-4 md:px-12">
-      <motion.div
+      <div
         className={`mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-screen-xl rounded-lg p-8 bg-amber-50 shadow-md hover:shadow-xl transition ease-in duration-300 ${
           showBorder ? "border-2 border-orange-200" : ""
         }`}
@@ -39,7 +39,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({
             onClick={handleCardClick}
           />
         ))}
-      </motion.div>
+      </div>
 
       <ServiceModal
         service={selectedService}

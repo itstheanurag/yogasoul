@@ -7,3 +7,12 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+@layer base {
+  a,
+  button,
+  li {
+    caret-color: transparent;
+    user-select: none;
+  }
+}

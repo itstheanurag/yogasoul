@@ -1,4 +1,4 @@
-import { services, type OurServices } from "../../data/services"; // adjust path as neede
+import { services } from "../../data/services"; // adjust path as neede
 import ServiceGallery from "./ServiceGallery";
 
 const ServicesPage = () => {

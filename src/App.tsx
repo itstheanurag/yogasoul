@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import { About, Contact, Home } from "./pages";
 import ServicesPage from "./components/Services/Services";
 import "./App.css";
+import Teams from "./components/Teams";
 function App() {
   return (
     <BrowserRouter basename="/">
@@ -10,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicesPage />} />
-        {/* <Route path="/team" element={<Team />} /> */}
+        <Route path="/team" element={<Teams />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route

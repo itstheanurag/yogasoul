@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, Route, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const textAnimationClass =

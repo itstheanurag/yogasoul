@@ -11,6 +11,10 @@ const reviews = [
     text: "The yoga retreats are peaceful, rejuvenating, and deeply spiritual. Highly recommended!",
   },
   {
+    name: "Nisha Verma",
+    text: "Each class is filled with positivity, encouragement, and real transformation.",
+  },
+  {
     name: "Sanya Kapoor",
     text: "After joining, my flexibility and confidence improved tremendously. Wonderful instructors!",
   },

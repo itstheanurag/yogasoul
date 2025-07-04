@@ -15,12 +15,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <motion.div
       className="bg-amber-50 shadow-sm rounded-lg hover:shadow-xl hover:scale-[1.02] transition ease-in duration-300 w-full max-w-sm mx-auto cursor-pointer"
-      initial={{ opacity: 0, y: -20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 10, backdropFilter: "blur(10px)" }}
+      whileInView={{ opacity: 1, y: 0, backdropFilter: "blur(0px)" }}
       transition={{
         duration: 0.3,
         delay: index * 0.1,
-        ease: "linear",
+        ease: "easeInOut",
       }}
       viewport={{ once: true }}
       onClick={() => onClick(service)}

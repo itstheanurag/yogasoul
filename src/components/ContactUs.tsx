@@ -6,8 +6,8 @@ const ContactUs = () => {
     alert("Message sent! We'll get back to you soon.");
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-orange-600 to-purple-700 flex items-center justify-center px-4 py-12">
-      <div className="bg-amber-50 rounded-2xl shadow-2xl p-8 w-full max-w-xl">
+    <div className="min-h-screen bg-orange-100 flex items-center justify-center px-4 py-12">
+      <div className="bg-amber-50 rounded-2xl shadow-sm p-8 min-w-lg transition-shadow duration-300 hover:shadow-2xl ease-in-out">
         <h1 className="text-3xl md:text-4xl font-bold text-orange-600 mb-6 text-center">
           Contact Us
         </h1>

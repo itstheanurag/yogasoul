@@ -1,4 +1,4 @@
-import AccordionItem from "./AccordianItem";
+
 
 const AboutUs = () => {
   return (
