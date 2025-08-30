@@ -3,7 +3,6 @@ import { FlipWords } from "./ui/flip-words";
 import { cn } from "@/lib/utils";
 
 const texts = [
-  "Namaste",
   "Meditation",
   "Balance",
   "Harmony",
@@ -13,7 +12,6 @@ const texts = [
   "Flow",
   "Pranayama",
   "Stillness",
-  "Zen",
   "Inner Peace",
   "Flexibility",
   "Strength",
@@ -42,20 +40,16 @@ const HeroSection = () => {
             Welcome to SoulYoga
           </h1>
           <div className="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-700 dark:text-neutral-400 font-secondary">
-            Discover a world of{" "}
+            Explore the power of {""}
             <span className="font-semibold text-emerald-600">
               <FlipWords words={texts} />
             </span>
             {""}
-            where every practice brings balance, focus, and inner peace. From
-            mindful breathwork to flowing asanas, our platform helps you
-            cultivate strength, flexibility, and tranquility—all in one
-            harmonious journey.
+            and experience how each practice bring focus, energy, and inner
+            peace to your life.
           </div>
         </div>
       </div>
-
-      <div className="h-screen"></div>
     </>
   );
 };
