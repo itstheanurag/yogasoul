@@ -35,7 +35,6 @@ export const Card = React.memo(
   )
 );
 
-
 Card.displayName = "Card";
 
 type Card = {
@@ -49,6 +48,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-7xl mx-auto md:px-8">
       {cards.map((card, index) => (
         <Card
+          key={index}
           card={card}
           index={index}
           hovered={hovered}

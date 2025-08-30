@@ -6,8 +6,8 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-  { name: "Classes", href: "/classes" },
-  { name: "Teachers", href: "/teachers" },
+  { name: "Services", href: "/services" },
+  { name: "Team", href: "/team" },
   { name: "Schedule", href: "/schedule" },
   { name: "Retreats", href: "/retreats" },
   { name: "About", href: "/about" },
@@ -51,19 +51,19 @@ export const Navbar = () => {
               aria-label="home"
               className="flex items-center space-x-2 z-50"
             >
-              <span className="text-xl md:text-2xl font-light text-emerald-800 dark:text-emerald-300 font-secondary">
+              <span className="text-xl md:text-2xl font-bold text-emerald-800 dark:text-emerald-300 font-secondary">
                 SoulYoga
               </span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <ul className="flex gap-8">
+              <ul className="flex gap-8 text-neutral-500 tracking-tighter">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 duration-200 font-medium relative group"
+                      className="hover:text-emerald-600 duration-200 font-medium relative group"
                     >
                       <span>{item.name}</span>
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-200 group-hover:w-full"></span>
@@ -77,10 +77,10 @@ export const Navbar = () => {
             <div className="hidden lg:flex items-center space-x-3">
               <Button
                 asChild
-                className="bg-emerald-600 text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-emerald-700 shadow-lg"
+                className="bg-emerald-600 hover:bg-emerald-700 text-shadow-md text-white transition-all duration-200 ease-in-out hover:scale-105 shadow-lg"
               >
                 <Link href="/membership">
-                  <span className="text-sm font-medium font-mono tracking-tighter">
+                  <span className="text-sm font-medium font-mono tracking-tighter text-shadow-md">
                     Start Your Journey
                   </span>
                 </Link>
@@ -118,12 +118,12 @@ export const Navbar = () => {
           >
             <div className="pt-4 border-t border-emerald-100/20">
               {/* Mobile Navigation Links */}
-              <ul className="space-y-4 mb-6">
+              <ul className="space-y-4 mb-6 text-neutral-500 tracking-tighter">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="block text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 duration-200 font-medium py-2"
+                      className="block  hover:text-emerald-600 duration-200 font-medium py-2"
                       onClick={closeMenu}
                     >
                       {item.name}
@@ -136,11 +136,11 @@ export const Navbar = () => {
               <div className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
                 <Button
                   asChild
-                  className="bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg w-fit sm:w-auto"
+                  className="bg-emerald-600 hover:bg-emerald-700 shadow-lg w-fit sm:w-auto"
                   onClick={closeMenu}
                 >
                   <Link href="/membership">
-                    <span className="text-sm font-medium font-mono tracking-tighter">
+                    <span className="text-sm font-medium font-mono tracking-tighter text-shadow-md">
                       Start Your Journey
                     </span>
                   </Link>
