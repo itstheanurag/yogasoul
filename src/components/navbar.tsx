@@ -6,14 +6,15 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Classes", href: "/classes" },
+  { name: "Teachers", href: "/teachers" },
+  { name: "Schedule", href: "/schedule" },
+  { name: "Retreats", href: "/retreats" },
+  { name: "About", href: "/about" },
 ];
 
 export const Navbar = () => {
-  const [menuState, setMenuState] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
@@ -25,78 +26,123 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header>
-      <nav
-        data-state={menuState && "active"}
-        className="fixed z-20 w-full px-2"
-      >
+      <nav className="fixed z-50 w-full px-2">
         <div
           className={cn(
-            "mx-auto mt-3 max-w-6xl px-4 transition-all duration-300 lg:px-12",
+            "mx-auto px-4 transition-all duration-300 lg:mt-3 lg:max-w-6xl lg:px-12 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg",
             isScrolled &&
-              "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5"
+              "bg-background/10 shadow-lg lg:max-w-4xl lg:rounded-2xl lg:border lg:border-emerald-100/20 lg:px-5"
           )}
         >
-          <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
-            <div className="flex w-full justify-between lg:w-auto">
-              <Link
-                href="/"
-                aria-label="home"
-                className="flex items-center space-x-2"
-              >
-                <span className="text-sm md:text-2xl italic py-2 font-bold text-orange-900 font-cursive">
-                  Soulyoga
-                </span>
-              </Link>
+          <div className="relative flex items-center justify-between py-4">
+            {/* Logo */}
+            <Link
+              href="/"
+              aria-label="home"
+              className="flex items-center space-x-2 z-50"
+            >
+              <span className="text-xl md:text-2xl font-light text-emerald-800 dark:text-emerald-300 font-secondary">
+                SoulYoga
+              </span>
+            </Link>
 
-              <button
-                onClick={() => setMenuState(!menuState)}
-                aria-label={menuState == true ? "Close Menu" : "Open Menu"}
-                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden "
-              >
-                <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-              </button>
-            </div>
-
-            <div className="absolute inset-0 m-auto  backdrop-blur-md hidden  size-fit lg:block font-cursive text-lg ">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
               <ul className="flex gap-8">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="text-muted-foreground hover:text-orange-800 block duration-150"
+                      className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 duration-200 font-medium relative group"
                     >
                       <span>{item.name}</span>
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-200 group-hover:w-full"></span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent font:medium">
-              <div className="lg:hidden">
-                <ul className="space-y-6 text-base">
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                      >
-                        <span>{item.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit items-start justify-center ">
+            {/* Desktop CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-3">
+              <Button
+                asChild
+                className="bg-emerald-600 text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-emerald-700 shadow-lg"
+              >
+                <Link href="/membership">
+                  <span className="text-sm font-medium font-mono tracking-tighter">
+                    Start Your Journey
+                  </span>
+                </Link>
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+              className="relative z-50 p-2 lg:hidden"
+            >
+              <Menu
+                className={cn(
+                  "h-6 w-6 text-emerald-700 transition-all duration-300",
+                  isMenuOpen && "rotate-180 scale-0 opacity-0"
+                )}
+              />
+              <X
+                className={cn(
+                  "absolute inset-0 m-auto h-6 w-6 text-emerald-700 transition-all duration-300",
+                  !isMenuOpen && "-rotate-180 scale-0 opacity-0",
+                  isMenuOpen && "rotate-0 scale-100 opacity-100"
+                )}
+              />
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          <div
+            className={cn(
+              "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
+              isMenuOpen ? "max-h-96 opacity-100 pb-6" : "max-h-0 opacity-0"
+            )}
+          >
+            <div className="pt-4 border-t border-emerald-100/20">
+              {/* Mobile Navigation Links */}
+              <ul className="space-y-4 mb-6">
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="block text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 duration-200 font-medium py-2"
+                      onClick={closeMenu}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Mobile CTA Buttons */}
+              <div className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
                 <Button
                   asChild
-                  className="bg-transparent border-none backdrop-blur-md text-orange-900 transition-all duration-200 ease-in-out hover:scale-105 hover:border-transparent hover:bg-orange-900 hover:text-neutral-50"
+                  className="bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg w-fit sm:w-auto"
+                  onClick={closeMenu}
                 >
-                  <Link href="#">
-                    <span className="text-md">Contact Us</span>
+                  <Link href="/membership">
+                    <span className="text-sm font-medium font-mono tracking-tighter">
+                      Start Your Journey
+                    </span>
                   </Link>
                 </Button>
               </div>
