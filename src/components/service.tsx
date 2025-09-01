@@ -18,8 +18,8 @@ export const ServiceCard = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
     >
-      <CardContainer className="inter-var tracking-tighter">
-        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.3] hover:shadow-emerald-500/[0.2] dark:bg-neutral-900 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border transition-all duration-500">
+      <CardContainer className="inter-var tracking-tighter w-full max-w-md mx-auto">
+        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.3] hover:shadow-emerald-500/[0.2] dark:bg-neutral-900 dark:border-white/[0.2] border-black/[0.1] w-full rounded-xl p-6 border transition-all duration-500 h-auto">
           {/* Title */}
           <CardItem
             translateZ="50"
@@ -32,7 +32,7 @@ export const ServiceCard = ({
           <CardItem
             as="p"
             translateZ="60"
-            className="text-neutral-400 text-sm max-w-sm mt-2 dark:text-neutral-400 group-hover/card:text-neutral-600 transition-colors duration-300 leading-relaxed"
+            className="text-neutral-400 text-sm max-w-full mt-2 dark:text-neutral-400 group-hover/card:text-neutral-600 transition-colors duration-300 leading-relaxed"
           >
             {service.description}
           </CardItem>
@@ -41,15 +41,13 @@ export const ServiceCard = ({
           <CardItem translateZ="100" className="w-full mt-4">
             <img
               src={service.src}
-              height="1000"
-              width="1000"
-              className="h-60 w-full object-cover object-center rounded-xl group-hover/card:shadow-xl transition-shadow duration-300"
+              className="w-full h-auto object-cover object-center rounded-xl group-hover/card:shadow-xl transition-shadow duration-300 aspect-[4/3]"
               alt={service.title}
             />
           </CardItem>
 
-          {/* Bottom section with duration and price */}
-          <div className="flex justify-between items-center mt-6">
+          {/* Bottom section */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-2 sm:gap-0">
             <CardItem
               translateZ={20}
               className="flex items-center text-neutral-500 dark:text-neutral-500 group-hover/card:text-neutral-600 transition-colors duration-300"
@@ -86,7 +84,7 @@ export const ServiceCard = ({
 
 const Services = () => {
   return (
-    <section className="my-24 max-w-8xl mx-auto">
+    <section className="mt-24 max-w-8xl mx-auto">
       <motion.h2
         className="text-4xl sm:text-5xl font-bold text-emerald-600 text-center tracking-tighter font-secondary"
         initial={{ opacity: 0, y: -20 }}

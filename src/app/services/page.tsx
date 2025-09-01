@@ -33,11 +33,11 @@ const Page = () => {
 
   return (
     <>
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-26">
         {/* ✅ Hero Section */}
         <section className="text-center mb-16 sm:mb-20">
           <motion.h1
-            className="sm:text-4xl lg:text-5xl font-bold text-emerald-600 font-secondary tracking-tight pt-10 sm:pt-16"
+            className="sm:text-4xl lg:text-5xl font-bold text-emerald-600 font-secondary tracking-tight sm:pt-16"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -87,11 +87,8 @@ const Page = () => {
             )
           )}
         </section>
-
-        {/* ✅ What We Offer Cards */}
       </main>
 
-      {/* ✅ Detailed Services Grid */}
       <section className="min-h-screen w-full flex flex-col items-center justify-center">
        <Services />
       </section>

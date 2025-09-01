@@ -33,7 +33,7 @@ export const teamMembers: TeamMember[] = [
     description:
       "A renowned yoga master and Guinness World Records holder, Dr. Aman Sood Suryavanshi is celebrated for his dedication to advancing yoga on a global scale. As Managing Director, he brings visionary leadership and decades of experience, inspiring students to explore their highest potential through discipline, strength, and mindfulness.",
     mantra: "Discipline transforms dreams into reality.",
-    image: "/team/aman-sood.jpg",
+    image: "/team/aman.png",
   },
   {
     name: "Ms. Shabana Azmi",
@@ -42,7 +42,7 @@ export const teamMembers: TeamMember[] = [
     description:
       "With deep expertise in traditional and modern yoga practices, Ms. Shabana Azmi guides her students with compassion and clarity. Her teaching style focuses on balance, flexibility, and inner awareness, helping practitioners connect body, mind, and breath with ease.",
     mantra: "Breathe deeply, live mindfully.",
-    image: "/team/shabana-azmi.jpg",
+    image: "/team/shama-azmee.png",
   },
   {
     name: "Ms. Shama Parveen",
@@ -51,7 +51,7 @@ export const teamMembers: TeamMember[] = [
     description:
       "With years of dedicated teaching, Ms. Shama Parveen brings depth and authenticity to every class. Her expertise lies in guiding students toward strength, flexibility, and mindfulness while creating a calm and supportive learning environment.",
     mantra: "Stability in body brings peace in mind.",
-    image: "/team/shama-parveen.jpg",
+    image: "/team/shama-parveen.png",
   },
   {
     name: "Ms. Roshi",
@@ -60,7 +60,7 @@ export const teamMembers: TeamMember[] = [
     description:
       "Ms. Roshi is dedicated to guiding students with a blend of strength and mindfulness. Her teaching emphasizes proper alignment, fluid movements, and inner awareness, helping practitioners deepen their practice while cultivating peace and vitality.",
     mantra: "Flow with breath, grow with balance.",
-    image: "/team/roshi.jpg",
+    image: "/team/roshi.png",
   },
   {
     name: "Mr. Sahilpreet Singh",
@@ -69,6 +69,6 @@ export const teamMembers: TeamMember[] = [
     description:
       "Balancing both the art of yoga and the precision of administration, Mr. Sahilpreet Singh brings dedication to teaching and management alike. As a yoga teacher, he focuses on strength, discipline, and mindful practice, while as an accounts admin, he ensures smooth operations behind the scenes.",
     mantra: "Discipline in practice, harmony in life.",
-    image: "/team/sahilpreet-singh.jpg",
+    image: "/team/sahil.png",
   },
 ];

@@ -11,7 +11,7 @@ export const Card = React.memo(
     hovered,
     setHovered,
   }: {
-    card: any;
+    card: Card;
     index: number;
     hovered: number | null;
     setHovered: React.Dispatch<React.SetStateAction<number | null>>;
@@ -26,10 +26,10 @@ export const Card = React.memo(
     >
       <Image
         src={card.src}
-        alt={card.title}
+        alt={card.src}
         className="object-cover"
-        fill
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        fill
       />
     </div>
   )

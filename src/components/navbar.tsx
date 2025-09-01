@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils";
 const menuItems = [
   { name: "Services", href: "/services" },
   { name: "Team", href: "/team" },
-  { name: "Schedule", href: "/schedule" },
-  { name: "Retreats", href: "/retreats" },
-  { name: "About", href: "/about" },
+  { name: "Programs", href: "/programs" },
+  { name: "Contact us", href: "/contact" },
+  { name: "About us", href: "/about" },
 ];
 
 export const Navbar = () => {
