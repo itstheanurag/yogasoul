@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Caveat, Dancing_Script, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import FooterSection from "@/components/footer";
 
 const caveat = Caveat({
   variable: "--font-primary",
@@ -41,6 +42,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <FooterSection />
       </body>
     </html>
   );

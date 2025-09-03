@@ -4,6 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Service, type Services, servicesData } from "@/lib/data/services";
+import Heading from "./internals/heading";
+import { Subheading } from "./internals/subheading";
 
 export const ServiceCard = ({
   service,
@@ -85,23 +87,11 @@ export const ServiceCard = ({
 const Services = () => {
   return (
     <section className="mt-24 max-w-8xl mx-auto">
-      <motion.h2
-        className="text-4xl sm:text-5xl font-bold text-emerald-600 text-center tracking-tighter font-secondary"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Our Services
-      </motion.h2>
-      <motion.p
-        className="sm:text-lg md:text-xl text-neutral-400 tracking-tighter leading-tighter font-light max-w-2xl mx-auto text-center"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
+      <Heading>Our Services</Heading>
+      <Subheading>
         Choose from our yoga and wellness sessions to elevate your mind and
         body.
-      </motion.p>
+      </Subheading>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
         {servicesData.map((service: Service, index: number) => (
