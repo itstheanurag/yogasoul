@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FocusCards } from "./focus-cards";
-import Heading from "./internals/heading";
+import { Heading } from "./internals/heading";
 import { Subheading } from "./internals/subheading";
 
 const images = [

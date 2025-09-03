@@ -1,8 +1,10 @@
+"use client";
+
 import { motion } from "framer-motion";
 import React from "react";
 import { cn } from "@/lib/utils";
 
-const Heading = ({
+export const Heading = ({
   children,
   className,
 }: {
@@ -23,5 +25,3 @@ const Heading = ({
     </motion.h2>
   );
 };
-
-export default Heading;

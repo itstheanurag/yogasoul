@@ -123,7 +123,7 @@ export const Navbar = () => {
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="block  hover:text-emerald-600 duration-200 font-medium py-2"
+                      className="block hover:text-emerald-600 duration-200 font-medium py-2"
                       onClick={closeMenu}
                     >
                       {item.name}

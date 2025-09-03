@@ -1,9 +1,8 @@
 "use client";
 
-import { motion } from "motion/react";
 import { Program, programsData } from "@/lib/data/program";
 import ProgramCard from "@/components/program";
-import Heading from "@/components/internals/heading";
+import { Heading } from "@/components/internals/heading";
 import { Subheading } from "@/components/internals/subheading";
 const Page = () => {
   return (

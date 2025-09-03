@@ -1,3 +1,9 @@
+export type ServiceType = {
+  title: string;
+  description: string;
+  buttonText: string;
+};
+
 export type Service = {
   title: string;
   description: string;
@@ -16,7 +22,6 @@ export const servicesData: Services = [
     src: "/yoga/hatha-yoga.jpg",
     duration: "60 min",
     price: "$25",
-
   },
   {
     title: "Vinyasa Flow",
@@ -57,5 +62,26 @@ export const servicesData: Services = [
     src: "/yoga/maternal-yoga.png",
     duration: "60 min",
     price: "$32",
+  },
+];
+
+export const whatWeOffer = [
+  {
+    title: "One-to-One Private Classes",
+    description:
+      "Move at your own pace with expert instruction that nurtures strength, healing, and personal transformation.",
+    buttonText: "Learn More",
+  },
+  {
+    title: "Group Classes",
+    description:
+      "Connect and grow with our vibrant community. Our inclusive classes welcome all levels and include styles like Hatha, Vinyasa, Ashtanga, and more.",
+    buttonText: "Explore Styles",
+  },
+  {
+    title: "Yoga Therapy for Healing",
+    description:
+      "Address health concerns like back pain, anxiety, insomnia, and more through therapeutic yoga tailored for your well-being.",
+    buttonText: "Inquire Now",
   },
 ];
