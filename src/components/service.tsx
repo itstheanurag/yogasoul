@@ -150,9 +150,6 @@ const Services = () => {
         ))}
       </div>
 
-      <div className="mt-16 flex items-center justify-center">
-        <ButtonMain link="/contact">Book Your Session</ButtonMain>
-      </div>
     </section>
   );
 };
