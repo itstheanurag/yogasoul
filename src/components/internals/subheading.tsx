@@ -14,7 +14,7 @@ export const Subheading = ({
     <motion.p
       className={cn(
         "mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-neutral-500 dark:text-neutral-400 max-w-3xl mx-auto leading- tracking-tight text-center",
-        className   
+        className
       )}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

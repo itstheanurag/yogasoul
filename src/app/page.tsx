@@ -1,6 +1,6 @@
 import HeroSection from "@/components/hero-section";
 import Services from "@/components/service";
-import { Teams } from "@/components/teams";
+import TeamSection from "@/components/teams";
 import Yogas from "@/components/yogas";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
           Our Team
         </h1>
         <div className="w-full max-w-7xl">
-          <Teams />
+          <TeamSection />
         </div>
       </div>
     </main>

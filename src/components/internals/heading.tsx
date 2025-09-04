@@ -14,7 +14,7 @@ export const Heading = ({
   return (
     <motion.h2
       className={cn(
-        "text-4xl sm:text-5xl font-bold text-emerald-600 text-center tracking-tighter font-secondary",
+        "text-4xl font-bold text-emerald-600 tracking-tighter font-secondary text-center",
         className
       )}
       initial={{ opacity: 0, y: -20 }}
