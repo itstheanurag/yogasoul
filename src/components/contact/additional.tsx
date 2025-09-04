@@ -19,7 +19,7 @@ export const AdditionalInformation = () => {
             <p className="text-emerald-700 dark:text-emerald-300 leading-relaxed">
               Our beautiful, serene studio space is designed to provide the
               perfect environment for your yoga practice. Located in the heart
-              of Ludhiana, we're easily accessible by public transport and offer
+              of Ludhiana, we are easily accessible by public transport and offer
               free parking for our students.
             </p>
             <div className="mt-6">

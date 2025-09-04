@@ -38,9 +38,9 @@ export const ContactInfoSection = () => (
         Get in Touch
       </h2>
       <Subheading className="text-start">
-        Whether you're a beginner taking your first step into yoga or an
-        experienced practitioner looking to deepen your practice, we're here to
-        support you every step of the way.
+        {
+          "Whether you're a beginner taking your first step into yoga or an experienced practitioner looking to deepen your practice, we're here to support you every step of the way."
+        }
       </Subheading>
     </div>
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Heading } from "@/components/internals/heading";
 import { motion } from "motion/react";
 
@@ -13,8 +13,8 @@ export const ContactHeader = () => (
       transition={{ duration: 0.6, delay: 0.3 }}
     >
       Ready to begin your yoga journey? Have questions about our classes or want
-      to book a private session? We'd love to hear from you. Reach out to us and
-      let's connect.
+      to book a private session? We&apos;d love to hear from you. Reach out to
+      us and let&apos;s connect.
     </motion.p>
   </section>
 );

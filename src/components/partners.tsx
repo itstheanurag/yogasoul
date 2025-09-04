@@ -1,7 +1,5 @@
 "use client";
-import { Partner, partners } from "@/lib/data/partners";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { partners } from "@/lib/data/partners";
 import { Heading } from "./internals/heading";
 import { Subheading } from "./internals/subheading";
 import { HoverEffect } from "./ui/card-hover-effect";
@@ -16,10 +14,8 @@ export const Partners = () => {
       </Subheading>
 
       <div className="max-w-8xl mx-auto px-8">
-      <HoverEffect items={partners} />
-    </div>
-
-
+        <HoverEffect items={partners} />
+      </div>
     </section>
   );
 };

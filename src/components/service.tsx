@@ -12,6 +12,7 @@ import {
 import { Heading } from "./internals/heading";
 import { Subheading } from "./internals/subheading";
 import ButtonMain from "./internals/button";
+import Image from "next/image";
 
 export const ServicesSecondaryCard: React.FC<{ service: ServiceType }> = ({
   service,
@@ -98,10 +99,14 @@ export const ServiceCard = ({
 
           {/* Image */}
           <CardItem translateZ="100" className="w-full mt-4">
-            <img
+            <Image
               src={service.src}
-              className="w-full h-auto object-cover object-center rounded-xl group-hover/card:shadow-xl transition-shadow duration-300 aspect-[4/3]"
               alt={service.title}
+              width={800}
+              height={600} 
+              className="w-full h-auto object-cover object-center rounded-xl group-hover/card:shadow-xl transition-shadow duration-300 aspect-[4/3]"
+              quality={100}
+              priority
             />
           </CardItem>
 
@@ -149,7 +154,6 @@ const Services = () => {
           <ServiceCard key={service.title} service={service} index={index} />
         ))}
       </div>
-
     </section>
   );
 };
