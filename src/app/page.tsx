@@ -1,3 +1,4 @@
+import FaqSection from "@/components/faqs";
 import HeroSection from "@/components/hero-section";
 import { Heading } from "@/components/internals/heading";
 import { Subheading } from "@/components/internals/subheading";
@@ -11,11 +12,8 @@ export default function Home() {
     <main className="min-h-screen w-full flex flex-col items-center justify-center">
       <HeroSection />
       <Services />
-
       <Partners />
-
       <Yogas />
-
       <div className="flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 py-16">
         <Heading>Our Team</Heading>
         <Subheading>
@@ -25,6 +23,10 @@ export default function Home() {
         <div className="w-full max-w-7xl">
           <TeamSection />
         </div>
+      </div>
+
+      <div className="w-full max-w-7xl">
+        <FaqSection />
       </div>
     </main>
   );
