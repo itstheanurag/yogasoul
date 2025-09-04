@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
+import ButtonMain from "./internals/button";
 
 const menuItems = [
   { name: "Services", href: "/services" },
@@ -75,16 +76,7 @@ export const Navbar = () => {
 
             {/* Desktop CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-3">
-              <Button
-                asChild
-                className="bg-emerald-600 hover:bg-emerald-700 text-shadow-md text-white transition-all duration-200 ease-in-out hover:scale-105 shadow-lg"
-              >
-                <Link href="/membership">
-                  <span className="text-sm font-medium font-mono tracking-tighter text-shadow-md">
-                    Start Your Journey
-                  </span>
-                </Link>
-              </Button>
+              <ButtonMain link="/contact"> Start Your Journey </ButtonMain>
             </div>
 
             {/* Mobile Menu Button */}
@@ -134,17 +126,7 @@ export const Navbar = () => {
 
               {/* Mobile CTA Buttons */}
               <div className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
-                <Button
-                  asChild
-                  className="bg-emerald-600 hover:bg-emerald-700 shadow-lg w-fit sm:w-auto"
-                  onClick={closeMenu}
-                >
-                  <Link href="/membership">
-                    <span className="text-sm font-medium font-mono tracking-tighter text-shadow-md">
-                      Start Your Journey
-                    </span>
-                  </Link>
-                </Button>
+                <ButtonMain link="/contact"> Start Your Journey </ButtonMain>
               </div>
             </div>
           </div>

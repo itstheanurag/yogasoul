@@ -7,7 +7,7 @@ import { ServiceType, whatWeOffer } from "@/lib/data/services";
 const Page = () => {
   return (
     <>
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-26">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-26 pb-12">
         {/* ✅ Hero Section */}
         <section className="text-center mb-16 sm:mb-20">
           <Heading>Services at Soul Sanctuary Yoga</Heading>
@@ -41,14 +41,9 @@ const Page = () => {
         </section>
 
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {whatWeOffer.map(
-            (
-              service: ServiceType,
-              index: number
-            ) => (
-              <ServicesSecondaryCard service={service} key={index} />
-            )
-          )}
+          {whatWeOffer.map((service: ServiceType, index: number) => (
+            <ServicesSecondaryCard service={service} key={index} />
+          ))}
         </section>
       </main>
 

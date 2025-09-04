@@ -11,38 +11,55 @@ import {
 } from "@/lib/data/services";
 import { Heading } from "./internals/heading";
 import { Subheading } from "./internals/subheading";
+import ButtonMain from "./internals/button";
 
 export const ServicesSecondaryCard: React.FC<{ service: ServiceType }> = ({
   service,
 }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
-      className="group relative overflow-hidden bg-white/80 dark:bg-neutral-900/70 backdrop-blur-md rounded-2xl border border-neutral-200 dark:border-neutral-700 hover:border-emerald-500 transition-all duration-300 flex flex-col p-8"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="group relative overflow-hidden bg-gradient-to-br from-white via-white to-emerald-50/30 dark:from-neutral-900 dark:via-neutral-900 dark:to-emerald-950/30 backdrop-blur-lg rounded-3xl border border-neutral-200/50 dark:border-neutral-700/50 hover:border-emerald-400/60 dark:hover:border-emerald-400/40 transition-all duration-500 flex flex-col p-8 shadow-lg hover:shadow-xl hover:shadow-emerald-500/10"
     >
-      {/* Top Decorative Icon */}
-      <div className="absolute top-4 right-4 text-emerald-500 text-4xl opacity-10 group-hover:opacity-20 transition">
-        🧘
-      </div>
-
       {/* Service Title */}
-      <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 group-hover:text-emerald-600 transition">
+      <motion.h2
+        className="text-2xl font-bold text-neutral-600 dark:text-neutral-200 mb-6 tracking-tighter"
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        whileHover={{ x: 4 }}
+      >
         {service.title}
-      </h2>
+      </motion.h2>
 
-      {/* Service Description */}
-      <p className="text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed">
+      <motion.p
+        className="text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed text-base flex-grow"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
         {service.description}
-      </p>
+      </motion.p>
 
-      {/* Button */}
-      <button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg w-fit sm:w-auto py-3 px-6 rounded-ful transition-all duration-300 font-mono tracking-tight rounded-2xl text-neutral-50 text-shadow-md">
-        {service.buttonText}
-      </button>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <ButtonMain>{service.buttonText}</ButtonMain>
+      </motion.div>
 
-      {/* Hover Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-transparent opacity-0 group-hover:opacity-20 transition duration-300"></div>
+      {/* Subtle Border Glow */}
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-emerald-500/0 via-emerald-500/10 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+      {/* Corner Accent */}
+      <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-emerald-500/5 to-transparent rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     </motion.div>
   );
 };
@@ -110,13 +127,7 @@ export const ServiceCard = ({
               <span className="text-sm font-medium">{service.duration}</span>
             </CardItem>
 
-            <CardItem
-              translateZ={20}
-              as="button"
-              className="px-6 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-colors duration-300 shadow-lg"
-            >
-              {service.price}
-            </CardItem>
+            <ButtonMain>{service.price}</ButtonMain>
           </div>
         </CardBody>
       </CardContainer>
@@ -139,17 +150,9 @@ const Services = () => {
         ))}
       </div>
 
-      {/* Call to action */}
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.2 }}
-      >
-        <button className="mt-12 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-shadow-md font-mono py-4 px-8 rounded-2xl tracking-tighter transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-          Book Your Session
-        </button>
-      </motion.div>
+      <div className="mt-16 flex items-center justify-center">
+        <ButtonMain link="/contact">Book Your Session</ButtonMain>
+      </div>
     </section>
   );
 };

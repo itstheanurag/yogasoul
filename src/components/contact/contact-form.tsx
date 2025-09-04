@@ -60,7 +60,7 @@ export const ContactForm = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <div className="bg-white dark:bg-neutral-900 p-8 rounded-2xl shadow-lg border border-neutral-200 dark:border-neutral-800">
-          <h2 className="ttext-xl sm:text-3xl font-bold text-neutral-600 dark:text-neutral-200 mb-6 font-mono tracking-tighter">
+          <h2 className="text-xl sm:text-3xl font-bold text-neutral-600 dark:text-neutral-200 mb-6 tracking-tighter">
             Send Us a Message
           </h2>
 
