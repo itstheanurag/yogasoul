@@ -6,12 +6,12 @@ import { Heading } from "./internals/heading";
 import { Subheading } from "./internals/subheading";
 
 const images = [
-  { src: "/verticles/yoga1.jpg" },
-  { src: "/verticles/yoga2.jpg" },
-  { src: "/verticles/yoga3.jpg" },
-  { src: "/verticles/yoga4.jpg" },
-  { src: "/verticles/yoga5.jpeg" },
-  { src: "/verticles/yoga6.jpeg" },
+  { src: "./verticles/yoga1.jpg" },
+  { src: "./verticles/yoga2.jpg" },
+  { src: "./verticles/yoga3.jpg" },
+  { src: "./verticles/yoga4.jpg" },
+  { src: "./verticles/yoga5.jpeg" },
+  { src: "./verticles/yoga6.jpeg" },
 ];
 
 const Yogas = () => {
