@@ -5,13 +5,13 @@ export type TeamMember = {
   link: string;
 };
 
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ".";
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX! || "";
 
 export const teamMemberData: TeamMember[] = [
   {
     name: "Dr. Saurav Kumar",
     role: "Founding Director & Leading Yoga Teacher",
-    avatar: `${assetPrefix}/yoga/hatha-yoga.jpg`,
+    avatar: `${assetPrefix}/team/hatha-yoga.jpg`,
     link: "https://www.instagram.com/yoga.with.saurav/",
   },
   {

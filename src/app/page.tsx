@@ -80,7 +80,7 @@ export default function Home() {
         <Yogas />
       </Suspense>
 
-      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
+      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <Heading>Our Team</Heading>
         <Subheading>
           A dedicated team of yoga masters and teachers guiding you toward

@@ -106,7 +106,7 @@ export const ServiceCard = ({
           </CardItem>
 
           {/* Bottom section */}
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-2 sm:gap-0">
+          <div className="flex flex-wrap justify-between items-center mt-6 gap-2">
             <CardItem
               translateZ={20}
               className="flex items-center text-neutral-500 dark:text-neutral-500 group-hover/card:text-neutral-600 transition-colors duration-300"
@@ -137,7 +137,7 @@ export const ServiceCard = ({
 
 const Services = () => {
   return (
-    <section className="mt-12 max-w-8xl mx-auto">
+    <section className="sm:mx-18 md:mx-12 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <Heading>Our Services</Heading>
       <Subheading>
         Choose from our yoga and wellness sessions to elevate your mind and

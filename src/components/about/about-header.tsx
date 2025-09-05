@@ -3,7 +3,7 @@ import { Paragraph } from "../internals/paragraph";
 
 export const AboutHeader = () => (
   <section className="mb-8 flex flex-col items-center">
-    <div className="w-full max-w-4xl flex flex-col text-center">
+    <div className="w-full max-w-xl sm:max-w-4xl flex flex-col text-center">
       <div className="text-center">
         <Heading>About Soul Sanctuary Yoga</Heading>
       </div>

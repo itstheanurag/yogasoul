@@ -7,21 +7,29 @@ import FooterSection from "@/components/footer";
 const caveat = Caveat({
   variable: "--font-primary",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const dancingScript = Dancing_Script({
   variable: "--font-secondary",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {

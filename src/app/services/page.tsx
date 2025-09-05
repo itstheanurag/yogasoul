@@ -11,7 +11,7 @@ const Page = () => {
         <section className="mb-12 sm:mb-20 flex flex-col items-center text-center">
           <Heading>Services at Soul Sanctuary Yoga</Heading>
 
-          <div className="max-w-4xl w-full">
+          <div className="max-w-4xl w-full px-4 sm:px-0 sm:text-left">
             <Paragraph direction="left_to_right" delay={0.5}>
               Experience customized yoga sessions in the comfort of your home—
               designed to suit your lifestyle, goals, and health needs. Whether
@@ -21,7 +21,6 @@ const Page = () => {
             </Paragraph>
           </div>
         </section>
-
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {whatWeOffer.map((service: ServiceType, index: number) => (
             <ServicesSecondaryCard service={service} key={index} />

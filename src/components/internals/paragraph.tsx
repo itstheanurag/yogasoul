@@ -1,54 +1,54 @@
-  "use client";
-  import { motion } from "motion/react";
-  import React from "react";
-  import clsx from "clsx";
+"use client";
+import { motion } from "motion/react";
+import React from "react";
+import clsx from "clsx";
 
-  type Direction =
-    | "bottom_to_top"
-    | "top_to_bottom"
-    | "left_to_right"
-    | "right_to_left";
+type Direction =
+  | "bottom_to_top"
+  | "top_to_bottom"
+  | "left_to_right"
+  | "right_to_left";
 
-  type ParagraphProps = {
-    children: React.ReactNode;
-    className?: string;
-    direction?: Direction;
-    delay?: number;
+type ParagraphProps = {
+  children: React.ReactNode;
+  className?: string;
+  direction?: Direction;
+  delay?: number;
+};
+
+export const Paragraph = ({
+  children,
+  className,
+  direction = "top_to_bottom",
+  delay = 0.9,
+}: ParagraphProps) => {
+  const getInitial = (dir: Direction) => {
+    switch (dir) {
+      case "bottom_to_top":
+        return { opacity: 0, y: 30 };
+      case "top_to_bottom":
+        return { opacity: 0, y: -30 };
+      case "left_to_right":
+        return { opacity: 0, x: -30 };
+      case "right_to_left":
+        return { opacity: 0, x: 30 };
+      default:
+        return { opacity: 0 };
+    }
   };
 
-  export const Paragraph = ({
-    children,
-    className,
-    direction = "top_to_bottom",
-    delay = 0.9,
-  }: ParagraphProps) => {
-    const getInitial = (dir: Direction) => {
-      switch (dir) {
-        case "bottom_to_top":
-          return { opacity: 0, y: 30 };
-        case "top_to_bottom":
-          return { opacity: 0, y: -30 };
-        case "left_to_right":
-          return { opacity: 0, x: -30 };
-        case "right_to_left":
-          return { opacity: 0, x: 30 };
-        default:
-          return { opacity: 0 };
-      }
-    };
-
-    return (
-      <motion.p
-        className={clsx(
-          "mt-4 sm:mt-6 text-base  sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed",
-          className
-        )}
-        initial={getInitial(direction)}
-        whileInView={{ opacity: 1, x: 0, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, delay }}
-      >
-        {children}
-      </motion.p>
-    );
-  };
+  return (
+    <motion.p
+      className={clsx(
+        "mt-4 sm:mt-6 text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed",
+        className
+      )}
+      initial={getInitial(direction)}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6, delay }}
+    >
+      {children}
+    </motion.p>
+  );
+};
