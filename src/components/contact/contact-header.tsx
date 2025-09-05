@@ -7,10 +7,10 @@ export const ContactHeader = () => (
 
     <div className="w-full max-w-3xl">
       <Paragraph direction="left_to_right" delay={0.5}>
-        Have questions about our classes or want to book a session? We'd love to
-        hear from you! Reach out to discuss your goals, schedule a private
-        consultation, or learn more about our yoga programs designed for every
-        level and lifestyle.
+        Have questions about our classes or want to book a session? We&apos;d
+        love to hear from you! Reach out to discuss your goals, schedule a
+        private consultation, or learn more about our yoga programs designed for
+        every level and lifestyle.
       </Paragraph>
     </div>
   </section>
