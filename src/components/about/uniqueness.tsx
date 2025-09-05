@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { Heading } from "../internals/heading";
+import { Paragraph } from "../internals/paragraph";
 
 export const UniquenessSection = () => (
   <section className="mt-16 sm:mb-20">
@@ -74,33 +75,20 @@ export const UniquenessSection = () => (
         />
       </motion.div>
 
-      {/* Description Section */}
       <div className="text-left space-y-6">
-        <motion.p
-          className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-        >
+        <Paragraph>
           Soul Sanctuary Yoga is the place to be for all yoga enthusiasts! Our
           10,000 multi-style yoga practice is the only one of its kind, and our
           experienced instructors cover everything from traditional asanas to
           modern techniques.
-        </motion.p>
+        </Paragraph>
 
-        <motion.p
-          className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed relative"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 1.1 }}
-        >
+        <Paragraph>
           Pick and choose from our extensive collection of yoga offerings
           including Ashtanga, Hatha, Vinyasa, Hot yoga, Reverse aging yoga, and
           many more to create the perfect practice for you. Start your journey
           to a healthier you today.
-        </motion.p>
+        </Paragraph>
       </div>
     </div>
   </section>

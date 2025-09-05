@@ -13,6 +13,7 @@ import { Heading } from "./internals/heading";
 import { Subheading } from "./internals/subheading";
 import ButtonMain from "./internals/button";
 import Image from "next/image";
+import { Paragraph } from "./internals/paragraph";
 
 export const ServicesSecondaryCard: React.FC<{ service: ServiceType }> = ({
   service,
@@ -27,7 +28,7 @@ export const ServicesSecondaryCard: React.FC<{ service: ServiceType }> = ({
     >
       {/* Service Title */}
       <motion.h2
-        className="text-2xl font-bold text-neutral-600 dark:text-neutral-200 mb-6 tracking-tighter"
+        className="text-2xl font-bold text-neutral-600 dark:text-neutral-200 tracking-tighter"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -37,17 +38,11 @@ export const ServicesSecondaryCard: React.FC<{ service: ServiceType }> = ({
         {service.title}
       </motion.h2>
 
-      <motion.p
-        className="text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed text-base flex-grow"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
-        {service.description}
-      </motion.p>
+      <Paragraph className="mb-6">{service.description}</Paragraph>
 
+      {/* Push this to the bottom */}
       <motion.div
+        className="mt-auto"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -103,7 +98,7 @@ export const ServiceCard = ({
               src={service.src}
               alt={service.title}
               width={800}
-              height={600} 
+              height={600}
               className="w-full h-auto object-cover object-center rounded-xl group-hover/card:shadow-xl transition-shadow duration-300 aspect-[4/3]"
               quality={100}
               priority

@@ -1,20 +1,17 @@
-"use client";
 import { Heading } from "@/components/internals/heading";
-import { motion } from "motion/react";
+import { Paragraph } from "../internals/paragraph";
 
 export const ContactHeader = () => (
-  <section className="text-center mb-16 sm:mb-20">
-    <Heading>Contact Us</Heading>
+  <section className="mb-16 sm:mb-20 flex flex-col items-center text-center">
+    <Heading className="text-center">Contact Us</Heading>
 
-    <motion.p
-      className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-neutral-500 dark:text-neutral-400 max-w-3xl mx-auto leading- tracking-tight text-start"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
-    >
-      Ready to begin your yoga journey? Have questions about our classes or want
-      to book a private session? We&apos;d love to hear from you. Reach out to
-      us and let&apos;s connect.
-    </motion.p>
+    <div className="w-full max-w-3xl">
+      <Paragraph direction="left_to_right" delay={0.5}>
+        Have questions about our classes or want to book a session? We'd love to
+        hear from you! Reach out to discuss your goals, schedule a private
+        consultation, or learn more about our yoga programs designed for every
+        level and lifestyle.
+      </Paragraph>
+    </div>
   </section>
 );

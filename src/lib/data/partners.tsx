@@ -1,57 +1,67 @@
 export type Partner = {
-  name: string;
+  title: string;
   logo: string;
   description: string;
+  link: string;
 };
 
-export const partners = [
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
+
+export const partners: Partner[] = [
+  {
+    title: "Soul Yoga",
+    description:
+      "A modern yoga studio in the UAE offering a variety of classes for all levels, blending traditional practices with contemporary wellness approaches.",
+    link: "https://soulyoga.ae",
+    logo: `${assetPrefix}/partners/logo.webp`,
+  },
   {
     title: "Canadian Yoga Association",
     description:
       "Promoting yoga awareness and holistic practices across Canada.",
     link: "https://canadianyogaassociation.org",
-    logo: "./partners/canadian-yoga-assosciation.png",
+    logo: `${assetPrefix}/partners/canadian-yoga-assosciation.png`,
   },
   {
     title: "Amazing Olympia Yoga",
     description:
       "A global community connecting yoga enthusiasts with wellness experts.",
     link: "https://amazingolympiayoga.com",
-    logo: "./partners/amazing-olympia-yoga.png",
+    logo: `${assetPrefix}/partners/amazing-olympia-yoga.png`,
   },
   {
-    title: "Clinic",
+    title: "Yoga Clinic",
     description:
       "Integrating yoga into therapeutic and clinical healing programs.",
     link: "https://clinic.org",
-    logo: "./partners/clinic.png",
+    logo: `${assetPrefix}/partners/clinic.png`,
   },
   {
     title: "Registered Yoga Teachers",
     description:
       "An international registry of certified yoga teachers and trainers.",
     link: "https://registeredyogateachers.org",
-    logo: "./partners/registered-yoga-teacher.png",
+    logo: `${assetPrefix}/partners/registered-yoga-teacher.png`,
   },
   {
     title: "World Real Yoga Alliance",
     description:
       "Advocating authentic yoga practices and global unity through yoga.",
     link: "https://worldrealyogaalliance.org",
-    logo: "./partners/world-real-yoga-alliance.png",
+    logo: `${assetPrefix}/partners/world-real-yoga-alliance.png`,
   },
   {
     title: "Yoga Ministry Canada",
     description:
       "Government-supported initiative promoting yoga for all Canadians.",
     link: "https://yogaministrycanada.ca",
-    logo: "./partners/yoga-ministery-canada.png",
+    logo: `${assetPrefix}/partners/yoga-ministery-canada.png`,
   },
   {
     title: "Yogasna Bulgaria",
     description:
       "Spreading the culture of yoga and wellness throughout Bulgaria.",
     link: "https://yogasanabulgaria.bg",
-    logo: "./partners/yogasana-bulgaria.png",
+    logo: `${assetPrefix}/partners/yogasana-bulgaria.png`,
   },
 ];

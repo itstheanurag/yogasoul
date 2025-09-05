@@ -4,15 +4,7 @@ import React from "react";
 import { FocusCards } from "./focus-cards";
 import { Heading } from "./internals/heading";
 import { Subheading } from "./internals/subheading";
-
-const images = [
-  { src: "./verticles/yoga1.jpg" },
-  { src: "./verticles/yoga2.jpg" },
-  { src: "./verticles/yoga3.jpg" },
-  { src: "./verticles/yoga4.jpg" },
-  { src: "./verticles/yoga5.jpeg" },
-  { src: "./verticles/yoga6.jpeg" },
-];
+import { yogaImages } from "@/lib/data/yoga";
 
 const Yogas = () => {
   return (
@@ -25,7 +17,7 @@ const Yogas = () => {
       </Subheading>
 
       <div className="mt-24">
-        <FocusCards cards={images} />
+        <FocusCards cards={yogaImages} />
       </div>
     </section>
   );

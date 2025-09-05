@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Heading } from "../internals/heading";
 
 export const OfferingsSection = () => (
-  <div className="max-w-6xl mx-auto">
+  <div className="max-w-6xl mx-auto mt-12">
     {/* Main Heading */}
       <Heading className="mb-8">Our Offerings</Heading>
     <div className="grid md:grid-cols-2 gap-8 sm:gap-12">

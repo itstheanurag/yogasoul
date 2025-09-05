@@ -8,7 +8,7 @@ import ButtonMain from "./internals/button";
 const menuItems = [
   { name: "Services", href: "/services" },
   { name: "Team", href: "/team" },
-  { name: "Programs", href: "/programs" },
+  // { name: "Programs", href: "/programs" },
   { name: "Contact us", href: "/contact" },
   { name: "About us", href: "/about" },
 ];

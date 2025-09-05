@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import React from "react";
+import { Paragraph } from "../internals/paragraph";
 
 export const AdditionalInformation = () => {
   return (
@@ -16,12 +17,12 @@ export const AdditionalInformation = () => {
             <h3 className="text-2xl font-bold text-emerald-800 dark:text-emerald-200 mb-4">
               Visit Our Studio
             </h3>
-            <p className="text-emerald-700 dark:text-emerald-300 leading-relaxed">
+            <Paragraph>
               Our beautiful, serene studio space is designed to provide the
               perfect environment for your yoga practice. Located in the heart
-              of Ludhiana, we are easily accessible by public transport and offer
-              free parking for our students.
-            </p>
+              of Ludhiana, we are easily accessible by public transport and
+              offer free parking for our students.
+            </Paragraph>
             <div className="mt-6">
               <motion.button
                 whileHover={{ scale: 1.05 }}
