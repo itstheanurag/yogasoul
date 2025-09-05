@@ -43,10 +43,7 @@ jobs:
         run: bun install --ci
 
       - name: Build with Next.js
-        run: bun run build
-
-      - name: Export static site
-        run: bun run next export
+        run: bun run build   # <-- this alone generates ./out now
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
