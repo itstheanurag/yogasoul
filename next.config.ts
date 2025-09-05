@@ -8,7 +8,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   basePath: isProd ? "/yogasoul" : "",
-  assetPrefix: isProd ? "/yogasoul" : "",
+  assetPrefix: isProd ? "/yogasoul/" : "",
 };
 
 export default nextConfig;

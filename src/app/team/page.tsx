@@ -3,7 +3,7 @@ import { TeamPage } from "@/components/team/teamPage";
 
 const Page = () => {
   return (
-    <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-26">
+    <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-26 min-h-screen">
       {/* Team Section */}
       <TeamPage />
     </main>

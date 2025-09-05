@@ -7,7 +7,7 @@ import { Paragraph } from "@/components/internals/paragraph";
 const Page = () => {
   return (
     <>
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-26 pb-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-26 pb-12 min-h-screen">
         <section className="mb-12 sm:mb-20 flex flex-col items-center text-center">
           <Heading>Services at Soul Sanctuary Yoga</Heading>
 
