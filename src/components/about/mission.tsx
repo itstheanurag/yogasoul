@@ -8,7 +8,7 @@ export const MissionSection = () => (
         More Than a Practice — A Path
       </Heading>
       <section className="text-left sm:text-left mt-4">
-        <Paragraph direction="left_to_right" delay={0.5}>
+        <Paragraph direction="right_to_left" delay={0.5}>
           At Soul Sanctuary Yoga, we offer more than a practice — we offer a
           path. Led by Yogacharya Dr. Saurav Kumar and backed by the legacy of
           Yoga Clinic, we invite you to discover healing, strength, and soulful

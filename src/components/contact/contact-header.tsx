@@ -6,7 +6,7 @@ export const ContactHeader = () => (
     <Heading className="text-center">Contact Us</Heading>
 
     <div className="w-full max-w-3xl">
-      <Paragraph direction="left_to_right" delay={0.5}>
+      <Paragraph direction="left_to_right" delay={0}>
         Have questions about our classes or want to book a session? We&apos;d
         love to hear from you! Reach out to discuss your goals, schedule a
         private consultation, or learn more about our yoga programs designed for

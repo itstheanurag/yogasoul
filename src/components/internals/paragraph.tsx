@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import React from "react";
 import clsx from "clsx";
 
@@ -20,7 +20,7 @@ export const Paragraph = ({
   children,
   className,
   direction = "top_to_bottom",
-  delay = 0.9,
+  delay = 0.2, // 🔥 reduced default
 }: ParagraphProps) => {
   const getInitial = (dir: Direction) => {
     switch (dir) {
@@ -45,10 +45,11 @@ export const Paragraph = ({
       )}
       initial={getInitial(direction)}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6, delay }}
+      viewport={{ once: true, amount: 0.01 }} // 🔥 quicker trigger
+      transition={{ duration: 0.5, delay, ease: "easeOut" }} // 🔥 smoother mobile transition
     >
       {children}
     </motion.p>
   );
 };
+  

@@ -19,7 +19,7 @@ export const Heading = ({ children, className, delay = 0.3 }: HeadingProps) => {
       )}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }} 
+      transition={{ duration: 0.6, delay }}
     >
       {children}
     </motion.h2>

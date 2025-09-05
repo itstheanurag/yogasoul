@@ -3,12 +3,10 @@ import { Paragraph } from "../internals/paragraph";
 
 export const AboutHeader = () => (
   <section className="mb-8 flex flex-col items-center">
-    <div className="w-full max-w-xl sm:max-w-4xl flex flex-col text-center">
-      <div className="text-center">
-        <Heading>About Soul Sanctuary Yoga</Heading>
-      </div>
+    <Heading>About Soul Sanctuary Yoga</Heading>
 
-      <Paragraph direction="left_to_right" delay={0.5}>
+    <div className="w-full max-w-3xl">
+      <Paragraph direction="left_to_right" delay={0.3}>
         Welcome to Soul Sanctuary Yoga, the Dubai branch of the renowned Yoga
         Clinic. Under the guidance of Yogacharya Dr. Saurav Kumar, our studio is
         a haven for those seeking holistic health, inner peace, and mindful

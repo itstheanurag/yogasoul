@@ -6,7 +6,7 @@ export const FounderSection = () => (
     <Heading className="font-sans text-neutral-600 leading-tight text-xl hover:text-emerald-600 animation duration-200 ease-in-out font-base">
       ( By Yogacharya Dr. Saurav Kumar )
     </Heading>
-    <Paragraph direction="right_to_left" delay={0.5}>
+    <Paragraph direction="left_to_right" delay={0.3}>
       An initiative by Yoga Clinic, Soul Sanctuary Yoga brings decades of
       expertise in therapeutic and transformational yoga to Dubai. Our practice
       is rooted in ancient wisdom yet adapted for modern wellness needs.

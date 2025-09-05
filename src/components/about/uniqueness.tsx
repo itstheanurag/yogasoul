@@ -76,14 +76,14 @@ export const UniquenessSection = () => (
       </motion.div>
 
       <div className="text-left space-y-6">
-        <Paragraph>
+        <Paragraph direction="right_to_left" delay={0.5}>
           Soul Sanctuary Yoga is the place to be for all yoga enthusiasts! Our
           10,000 multi-style yoga practice is the only one of its kind, and our
           experienced instructors cover everything from traditional asanas to
           modern techniques.
         </Paragraph>
 
-        <Paragraph>
+        <Paragraph direction="right_to_left" delay={0.5}>
           Pick and choose from our extensive collection of yoga offerings
           including Ashtanga, Hatha, Vinyasa, Hot yoga, Reverse aging yoga, and
           many more to create the perfect practice for you. Start your journey

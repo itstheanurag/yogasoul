@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import {
   Service,
@@ -15,47 +15,70 @@ import ButtonMain from "./internals/button";
 import Image from "next/image";
 import { Paragraph } from "./internals/paragraph";
 
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const }, // ✅ TS happy
+  },
+};
+
+const childVariants: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" as const },
+  },
+};
+
 export const ServicesSecondaryCard: React.FC<{ service: ServiceType }> = ({
   service,
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      variants={cardVariants}
       className="group relative overflow-hidden bg-gradient-to-br from-white via-white to-emerald-50/30 dark:from-neutral-900 dark:via-neutral-900 dark:to-emerald-950/30 backdrop-blur-lg rounded-3xl border border-neutral-200/50 dark:border-neutral-700/50 hover:border-emerald-400/60 dark:hover:border-emerald-400/40 transition-all duration-500 flex flex-col p-8 shadow-lg hover:shadow-xl hover:shadow-emerald-500/10"
     >
-      {/* Service Title */}
+      {/* Title */}
       <motion.h2
+        variants={childVariants}
         className="text-2xl font-bold text-neutral-600 dark:text-neutral-200 tracking-tighter"
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
         whileHover={{ x: 4 }}
       >
         {service.title}
       </motion.h2>
 
-      <Paragraph className="mb-6">{service.description}</Paragraph>
+      <motion.div variants={childVariants}>
+        <Paragraph className="mb-6">{service.description}</Paragraph>
+      </motion.div>
 
-      {/* Push this to the bottom */}
-      <motion.div
-        className="mt-auto"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-      >
+      {/* Button at bottom */}
+      <motion.div variants={childVariants} className="mt-auto">
         <ButtonMain>{service.buttonText}</ButtonMain>
       </motion.div>
 
-      {/* Subtle Border Glow */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-emerald-500/0 via-emerald-500/10 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+      {/* Decorative accents */}
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-emerald-500/0 via-emerald-500/10 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-emerald-500/5 to-transparent rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </motion.div>
+  );
+};
 
-      {/* Corner Accent */}
-      <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-emerald-500/5 to-transparent rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+// Parent wrapper for cards
+export const ServicesGrid = ({ services }: { services: ServiceType[] }) => {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ staggerChildren: 0.2 }}
+      className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      {services.map((service) => (
+        <ServicesSecondaryCard key={service.title} service={service} />
+      ))}
     </motion.div>
   );
 };
