@@ -5,7 +5,7 @@ export type TeamMember = {
   link: string;
 };
 
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ".";
 
 export const teamMemberData: TeamMember[] = [
   {

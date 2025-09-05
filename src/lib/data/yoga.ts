@@ -1,6 +1,6 @@
 export type YogaImage = { src: string };
 
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ".";
 
 export const yogaImages: YogaImage[] = [
   { src: `${assetPrefix}/verticles/yoga1.jpg` },

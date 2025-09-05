@@ -5,7 +5,7 @@ export type Partner = {
   link: string;
 };
 
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ".";
 
 export const partners: Partner[] = [
   {

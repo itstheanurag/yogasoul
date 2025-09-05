@@ -14,7 +14,7 @@ export type Service = {
 
 export type Services = Service[];
 
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ".";
 
 export const servicesData: Services = [
   {
