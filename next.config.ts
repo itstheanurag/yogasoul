@@ -8,8 +8,11 @@ const nextConfig = {
   },
   trailingSlash: true,
   basePath: isProd ? "/yogasoul" : "",
+  assetPrefix: isProd ? "/yogasoul/" : "",
   env: {
-    NEXT_PUBLIC_ASSET_PREFIX: process.env.NEXT_PUBLIC_ASSET_PREFIX,
+    NEXT_PUBLIC_ASSET_PREFIX: isProd
+      ? "/yogasoul"
+      : process.env.NEXT_PUBLIC_ASSET_PREFIX || "",
   },
 };
 
