@@ -2,9 +2,11 @@
 const nextConfig = {
   output: "export",
   images: {
-    unoptimized: true, // needed since GitHub Pages can’t handle Next.js Image Optimization
+    unoptimized: true, // 🚀 disables optimization
   },
-  trailingSlash: true, // recommended for GitHub Pages to avoid 404s
+  trailingSlash: true,
+  basePath: "/yogasoul", // 👈 your repo name
+  assetPrefix: "/yogasoul/", // 👈 must match basePath
 };
 
 export default nextConfig;
